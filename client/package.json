@@ -12,6 +12,7 @@
     "format": "npm run prettier -- --write"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
     "autoprefixer": "^10.4.14",
     "axios": "^1.4.0",
     "postcss": "^8.4.23",

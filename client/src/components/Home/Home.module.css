@@ -28,8 +28,8 @@
 }
 
 .cardHome {
-  background-color: #d1cdc7;
-  box-shadow: 6px 6px 12px #c9c2bb, -6px -6px 12px #d7d4cc;
+
+  box-shadow: 6px 6px 4px #000, -6px -6px 4px #d7d4cc;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;

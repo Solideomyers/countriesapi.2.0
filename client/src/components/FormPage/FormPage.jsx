@@ -2,14 +2,15 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { getCountries } from '../../redux/actions'
+import { getCountries } from '../../redux/sliceCountries'
 import Validation from './Validation'
 import Styles from './FormPage.module.css'
 
 const FormPage = () => {
   //bring state global
-  const countries = useSelector(state => state.countries)
-  const sorting = useSelector(state => state.sorting)
+  const countries = useSelector(state => state.countries.sorting)
+  // console.log(countries)
+  const sorting = useSelector(state => state.countries.sorting)
 
   //hook
   const dispatch = useDispatch()
@@ -60,8 +61,8 @@ const FormPage = () => {
       ),
     })
   }
-
-  const countriesSort = countries.sort((a, b) => a.name.localeCompare(b.name))
+console.log(countries)
+  const countriesSort = [...countries].sort((a, b) => a.name.localeCompare(b.name))
 
   return (
     <div className={Styles.boxForm}>
@@ -154,7 +155,7 @@ const FormPage = () => {
                   // hidden={error.season ? true : false}
                 >
                   <option value="countries">--Select Countries--</option>
-                  {countriesSort?.map((event, i) => (
+                  {countriesSort.map((event, i) => (
                     <option key={i} value={event.name}>
                       {event.name}
                     </option>
@@ -166,7 +167,7 @@ const FormPage = () => {
               )}
             </div>
             <div>
-              {userData.country?.map((country, i) => (
+              {userData.country.map((country, i) => (
                 <span className={Styles.country} key={i} value={country}>
                   {country}
                   <button

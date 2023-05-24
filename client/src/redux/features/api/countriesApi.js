@@ -7,10 +7,26 @@ export const countriesApi = createApi({
   tagsTypes: ["Country"],
   endpoints: (builder) => ({
     getAllCountries: builder.query({
-      query: () => ({
-        url: `/${base}/${list}`,
+      query: (isSorting) => ({
+        url: `/${base}`,
         method: "GET",
         mode: "cors",
+      //   transformResponse: (resp) => { 
+      //     let sorted;
+        
+      //     if (isSorting === 'asc') {
+      //       sorted = [...resp].sort((a, b) => a.name.localeCompare(b.name))
+      //     }
+      //     if (isSorting === 'desc') {
+      //       sorted = [...resp].sort((a, b) => b.name.localeCompare(a.name))
+      //     }
+      //     return sorted
+      // }
+    })
+    }),
+    getCountryName: builder.query({
+      query: ({ name }) => ({
+        url: `/${base}/${name}`,
       }),
     }),
     getCountryId: builder.query({
@@ -42,6 +58,8 @@ export const countriesApi = createApi({
 export const {
   useGetAllCountriesQuery,
   useLazyGetAllCountriesQuery,
+  useGetCountryNameQuery,
+  useLazyGetCountryNameQuery,
   useGetCountryIdQuery,
   useLazyGetCountryIdQuery,
   useCreateCountryIdMutation,

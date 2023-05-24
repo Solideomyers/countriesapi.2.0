@@ -37,12 +37,6 @@ dependencies:
   redux:
     specifier: ^4.2.1
     version: 4.2.1
-  redux-devtools-extension:
-    specifier: ^2.13.9
-    version: 2.13.9(redux@4.2.1)
-  redux-thunk:
-    specifier: ^2.4.2
-    version: 2.4.2(redux@4.2.1)
   tailwind:
     specifier: ^4.0.0
     version: 4.0.0
@@ -2873,15 +2867,6 @@ packages:
       slash: 3.0.0
       sucrase: 3.32.0
       tslib: 1.14.1
-    dev: false
-
-  /redux-devtools-extension@2.13.9(redux@4.2.1):
-    resolution: {integrity: sha512-cNJ8Q/EtjhQaZ71c8I9+BPySIBVEKssbPpskBfsXqb8HJ002A3KRVHfeRzwRo6mGPqsm7XuHTqNSNeS1Khig0A==}
-    deprecated: Package moved to @redux-devtools/extension.
-    peerDependencies:
-      redux: ^3.1.0 || ^4.0.0
-    dependencies:
-      redux: 4.2.1
     dev: false
 
   /redux-thunk@2.4.2(redux@4.2.1):

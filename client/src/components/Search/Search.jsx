@@ -1,18 +1,22 @@
 import React from 'react'
 import { useState, useRef } from 'react'
 import { useDispatch } from 'react-redux'
-import { getByName, getCountries } from '../../redux/actions'
+import { getByName, getCountries } from '../../redux/sliceCountries'
 import { Button } from '../Button/Button'
+// import { useGetCountryNameQuery } from '../../redux/features/api/countriesApi'
 // import Styles from './Search.module.css'
 
 const Search = () => {
-  const dispatch = useDispatch()
   const [search, setSearch] = useState('')
+  console.log(search)
+  // const { data =[] } = useGetCountryNameQuery(search)
+  // console.log(data)
+  const dispatch = useDispatch()
   const searchRef = useRef(null)
 
   const handleSearch = event => {
     setSearch(event.target.value)
-    // console.log(search)
+    console.log(search)
   }
 
   const handleKeyDown = event => {
@@ -26,7 +30,7 @@ const Search = () => {
 
   const handleSubmit = () => {
     if (search.length) {
-      dispatch(getByName(search))
+      dispatch(getByName(search));
       searchRef.current.value = ''
     }
   }

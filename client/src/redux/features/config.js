@@ -5,7 +5,6 @@ export const baseQuery = fetchBaseQuery({ baseUrl: URL_BA });
 export const endpoint = {
   countries: {
     base: "countries",
-    list: "list",
   },
   activities: {
     base: "activities",

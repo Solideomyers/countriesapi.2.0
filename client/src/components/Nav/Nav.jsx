@@ -11,7 +11,7 @@ export const Nav = () => {
   const ubication = location.pathname === '/'
 
   return (
-    <header className="flex items-center justify-between xl:justify-start w-full px-8 py-4 h-[10vh] z-50">
+    <header className="flex items-center justify-between xl:justify-start w-full px-8 py-4 h-[10vh] z-50 mb-8">
       <div className="xl:w-1/6 text-center -mt-4">
         <span className=" font-nunito font-extrabold text-3xl bg-clip-text text-transparent relative px-2 py-3 bg-white backdrop-contrast-60 backdrop-filter backdrop-blur-3xl rounded-full drop-shadow-[-1px_3px_1px_black]">
           SoliDev

@@ -1,63 +1,56 @@
-import React, { useRef } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import {
-  sortPopulation,
-  getByContinent,
-  cleanFilters,
-  getChooseActivity,
-  getSort,
-} from '../../redux/actions'
-// import Styles from './Filter.module.css'
+import React, { useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { sortPopulationSuccess, getByContinent, cleanFilters, getChooseActivitySuccess, getSortSuccess } from "../../redux/sliceCountries";
 
 const Filters = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  //References for handle functions
-  const sortRef = useRef(null)
-  const populationRef = useRef(null)
-  const continentsRef = useRef(null)
+  // References for handle functions
+  const sortRef = useRef(null);
+  const populationRef = useRef(null);
+  const continentsRef = useRef(null);
 
-  //Bring activities from state global
-  const activities = useSelector(state => state.activities)
+  // Bring activities from global state
+  const activities = useSelector((state) => state.countries.activities);
 
-  //global handles
-  const handleFilterChange = event => {
-    const { name, value } = event.target
+  // Global handles
+  const handleFilterChange = (event) => {
+    const { name, value } = event.target;
 
     switch (name) {
       case 'Sort':
-        dispatch(getSort(value))
-        break
+        dispatch(getSortSuccess(value));
+        break;
       case 'Population':
-        dispatch(sortPopulation(value))
-        break
+        dispatch(sortPopulationSuccess(value));
+        break;
       case 'Continents':
-        dispatch(getByContinent(value))
-        break
+        dispatch(getByContinent(value));
+        break;
       case 'Activity':
-        dispatch(getChooseActivity(value))
-        break
+        dispatch(getChooseActivitySuccess(value));
+        break;
       default:
-        break
+        break;
     }
-  }
+  };
 
-  //Filters reset
-  const handleClean = event => {
-    event.preventDefault()
-    dispatch(cleanFilters())
-    sortRef.current.value = 'sort'
-    populationRef.current.value = 'population'
-    continentsRef.current.value = 'all'
-  }
+  // Filters reset
+  const handleClean = (event) => {
+    event.preventDefault();
+    dispatch(cleanFilters());
+    sortRef.current.value = 'sort';
+    populationRef.current.value = 'population';
+    continentsRef.current.value = 'all';
+  };
 
   return (
-    <div className="flex justify-center items-center w-full mt-20 ">
-      <div className="flex gap-4 py-2 px-4 rounded-2xl items-center backdrop-blur-xl backdrop-filter transition duration-300 ease-in-out w-full hover:transform hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-xl">
+    <div className="flex justify-center w-full h-[8rem] mt-2">
+      <div className="flex justify-center gap-4 p-4 rounded-lg backdrop-filter backdrop-blur-md hover:shadow-lg transition-all duration-300 w-full">
         <div className="flex flex-col flex-basis-[calc(33.33%-20px)] mb-20">
-          <label className="font-bold mb-5 text-white">Sort by Continents</label>
+          <label className="font-bold mb-5 text-white text-xl">Sort by Continents</label>
           <select
-            className="p-4 rounded-lg border-none bg-white shadow-inner focus:outline-none focus:shadow-md"
+            className="p-2 rounded-lg border-none bg-white shadow-inner focus:shadow-md focus:outline-none"
             id="continents"
             name="Continents"
             ref={continentsRef}
@@ -74,11 +67,11 @@ const Filters = () => {
           </select>
         </div>
         <div className="flex flex-col flex-basis-[calc(33.33%-20px)] mb-20">
-          <label className="font-bold mb-5 text-white" htmlFor="activity">
+          <label className="font-bold mb-5 text-white text-xl" htmlFor="activity">
             Sort by Activity
           </label>
           <select
-            className="p-4 rounded-lg border-none bg-white shadow-inner focus:outline-none focus:shadow-md"
+            className="p-2 rounded-lg border-none bg-white shadow-inner focus:shadow-md focus:outline-none"
             id="activity"
             name="Activity"
             onChange={handleFilterChange}
@@ -92,9 +85,9 @@ const Filters = () => {
           </select>
         </div>
         <div className="flex flex-col flex-basis-[calc(33.33%-20px)] mb-20">
-          <label className="font-bold mb-5 text-white">Sort by Name</label>
+          <label className="font-bold mb-5 text-white text-xl">Sort by Name</label>
           <select
-            className="p-4 rounded-lg border-none bg-white shadow-inner focus:outline-none focus:shadow-md"
+            className="p-2 rounded-lg border-none bg-white shadow-inner focus:shadow-md focus:outline-none"
             id="sort"
             name="Sort"
             ref={sortRef}
@@ -106,9 +99,9 @@ const Filters = () => {
           </select>
         </div>
         <div className="flex flex-col flex-basis-[calc(33.33%-20px)] mb-20">
-          <label className="font-bold mb-5 text-white">Sort by Population</label>
+          <label className="font-bold mb-5 text-white text-xl">Sort by Population</label>
           <select
-            className="p-4 rounded-lg border-none bg-white shadow-inner focus:outline-none focus:shadow-md"
+            className="p-2 rounded-lg border-none bg-white shadow-inner focus:shadow-md focus:outline-none"
             id="population"
             name="Population"
             ref={populationRef}
@@ -119,15 +112,17 @@ const Filters = () => {
             <option value="high">High</option>
           </select>
         </div>
-        <div className="flex flex-col justify-center">
-          <button className="p-5 rounded-10 border-none bg-blue-500 text-white transition duration-300 ease-in-out hover:bg-blue-700">
+        <div className="flex">
+          <button
+            className="p-2 rounded-lg border-none bg-blue-500 text-white shadow-md transition-all duration-300 hover:bg-white hover:text-blue-500 hover:shadow-md hover:-inset-5"
+            onClick={handleClean}
+          >
             Clean Filters
           </button>
         </div>
       </div>
     </div>
   );
-  
-}
+};
 
-export default Filters
+export default Filters;

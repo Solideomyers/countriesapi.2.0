@@ -11,7 +11,7 @@ import { TbBrandVite } from 'react-icons/tb'
 export const Skills = ({ position }) => {
   return (
     <div
-      className={`bg-white rounded-2xl p-8 gap-4 mt-4 w-full max-w-md mx-auto backdrop-filter backdrop-blur-lg bg-opacity-60 ${position}`}
+      className={`rounded-2xl p-8 gap-4 mt-4 w-full max-w-md mx-auto backdrop-filter backdrop-blur-2xl ${position}`}
     >
       <ul className="text-black w-full xl:flex flex-wrap gap-2 justify-center items-center">
         <li className="flex items-center py-2 gap-1 mx-1">

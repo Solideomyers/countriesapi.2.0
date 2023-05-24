@@ -1,4 +1,4 @@
-import { RiPlayFill } from 'react-icons/ri'
+import { BsHouseDoor } from 'react-icons/bs'
 import { Button } from '../../Button/Button'
 import { Word } from './Word'
 import { Description } from './Description'
@@ -10,7 +10,7 @@ export const Hero = () => {
       {/* information */}
       <div className="md:col-span-5 flex items-center justify-center p-8 xl:p-16">
         <div className="flex flex-col gap-8">
-          <h1 className="text-5xl xl:text-7xl font-bold leading-[4.5rem]">
+          <h1 className="text-white text-5xl xl:text-7xl font-bold leading-[4.5rem]">
             Countries - Individual Project <Word />
           </h1>
           <Description />
@@ -19,7 +19,7 @@ export const Hero = () => {
               linked={'https://www.linkedin.com/in/franciscomyers/'}
               color={'white'}
               icon={'Contact me'}
-              background={'primary'}
+              background={'transparent'}
               onClick={null}
               disabled={null}
               flex={null}
@@ -35,7 +35,7 @@ export const Hero = () => {
               background={'transparent'}
               size={'xl'}
               icon={
-                <RiPlayFill className="bg-secondary rounded-full text-primary p-4 box-content" />
+                <BsHouseDoor className="bg-secondary rounded-full text-primary p-4 box-content " />
               }
               text={"Let's start"}
               color={'primary'}

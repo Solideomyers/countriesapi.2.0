@@ -1,7 +1,7 @@
 export const Description = () => {
   return (
     <>
-      <p className="text-gray-500 text-xl leading-[2.5rem]">
+      <p className="text-white text-xl leading-[2.5rem]">
         PI, is an instance within Henry, through which Henry Students are driven
         to consolidate each of the skills that have been imparted to us
         throughout the intense and arduous work, hand in hand with workshops and

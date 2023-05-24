@@ -13,7 +13,7 @@ export const HeroRight = () => {
         <BsFillCircleFill className="absolute  top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[380px] text-white p-[16px] bg-primary rounded-full -z-10" />
         <Skills
           position={
-            'absolute xl:-bottom-[8rem] xl:right-[4rem] md:bottom-[16rem] md:right-[0rem]'
+            'absolute xl:-bottom-[7rem] xl:right-[8rem] md:bottom-[16rem] md:right-[0rem]'
           }
         />
       </div>

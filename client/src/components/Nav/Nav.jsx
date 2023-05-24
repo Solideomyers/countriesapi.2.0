@@ -22,23 +22,28 @@ export const Nav = () => {
         </span>
       </div>
       <nav
-        className={`fixed py-8 mt-2 bg-white bg-opacity-70 rounded-2xl backdrop-blur-3xl backdrop-filter w-[70%] md:w-[40%] xl:w-full h-full ${
+        className={`fixed py-8 mt-10 rounded-2xl text-white bg-white bg-opacity-10 backdrop-blur-3xl backdrop-filter w-[70%] md:w-[40%] xl:w-full h-full ${
           show ? 'left-0' : '-left-full'
         } top-0 xl:static flex-1 flex flex-col xl:flex-row items-center justify-center  gap-10 transition-all duration-500`}
       >
         {!ubication ? <Search /> : ''}
-        <Link to="/home" className="font-nunito-light text-lg font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-500 delay-75 rounded-xl hover:bg-primary hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]">
-          
-            Home
-    
+        <Link
+          to="/home"
+          className="font-nunito-light text-xl font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-500 delay-75 rounded-xl hover:bg-primary hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]"
+        >
+          Home
         </Link>
-        <Link to="/form" className="font-nunito-light text-lg font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-500 delay-75 rounded-xl hover:bg-primary hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]">
-            Create Activity
-          
+        <Link
+          to="/form"
+          className="font-nunito-light text-xl font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-500 delay-75 rounded-xl hover:bg-primary hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]"
+        >
+          Create Activity
         </Link>
-        <Link to="/about" className="font-nunito-light text-lg font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-500 delay-75 rounded-xl hover:bg-primary hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]">
-            About
-          
+        <Link
+          to="/about"
+          className="font-nunito-light text-xl font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-500 delay-75 rounded-xl hover:bg-primary hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]"
+        >
+          About
         </Link>
       </nav>
       <Button

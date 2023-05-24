@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Styles from './Pagination.module.css'
 import { Button } from '../Button/Button'
 
-const Pagination = ({ current, setCurrent, max }) => {
+export const Pagination = ({ current, setCurrent, max }) => {
   const [input, setInput] = useState(current.toString())
 
   const goToPage = page => {
@@ -76,5 +76,3 @@ const Pagination = ({ current, setCurrent, max }) => {
     </div>
   )
 }
-
-export default Pagination

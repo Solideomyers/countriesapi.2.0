@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import Styles from './About.module.css'
 
-const About = () => {
+export const About = () => {
   return (
     <div className={Styles.containerAbout}>
       <Link to="/home" className={Styles.linkAbout}>
@@ -36,5 +36,3 @@ const About = () => {
     </div>
   )
 }
-
-export default About

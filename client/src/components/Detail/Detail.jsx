@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Styles from './Detail.module.css'
 
-const Detail = () => {
+export const Detail = () => {
   const [country, setCountry] = useState([])
   let { id } = useParams()
   // console.log(id)
@@ -70,5 +70,3 @@ const Detail = () => {
     </div>
   )
 }
-
-export default Detail

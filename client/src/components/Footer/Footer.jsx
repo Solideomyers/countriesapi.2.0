@@ -2,7 +2,7 @@ import React from 'react'
 import Styles from './Footer.module.css'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className={Styles.footer}>
       <p>Powered by Francisco A. Myers</p>
@@ -25,5 +25,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer

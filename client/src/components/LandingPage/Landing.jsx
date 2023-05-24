@@ -1,9 +1,6 @@
-import { Header } from './Header'
-import { Hero } from './Hero'
-import { useGetAllCountriesQuery } from "../../redux/features/api/countriesApi"
+import { Header } from './Header/Header'
+import { Hero } from './Hero/Hero'
 export const Landing = () => {
-  const { data = [] } = useGetAllCountriesQuery()
-  console.log(data)
   return (
     <>
       <Header />

@@ -1,16 +1,13 @@
 import React from 'react'
 import { useState, useRef } from 'react'
 import { useDispatch } from 'react-redux'
-import { getByName, getCountries } from '../../redux/sliceCountries'
+import { getByName, getCountries } from '../../redux/slices/sliceCountries'
 import { Button } from '../Button/Button'
-// import { useGetCountryNameQuery } from '../../redux/features/api/countriesApi'
-// import Styles from './Search.module.css'
 
-const Search = () => {
+export const Search = () => {
   const [search, setSearch] = useState('')
   console.log(search)
-  // const { data =[] } = useGetCountryNameQuery(search)
-  // console.log(data)
+
   const dispatch = useDispatch()
   const searchRef = useRef(null)
 
@@ -30,7 +27,7 @@ const Search = () => {
 
   const handleSubmit = () => {
     if (search.length) {
-      dispatch(getByName(search));
+      dispatch(getByName(search))
       searchRef.current.value = ''
     }
   }
@@ -47,14 +44,20 @@ const Search = () => {
       >
         Back
       </button> */}
-      <Button onClick={(event) => handleClose(event)} styles={'[16rem] px-4 py-[1.2rem] border-none cursor-pointer'} color={'primary'} background={'transparent'} icon={"Back"} />
+      <Button
+        onClick={event => handleClose(event)}
+        styles={'[16rem] px-4 py-[1.2rem] border-none cursor-pointer'}
+        color={'primary'}
+        background={'transparent'}
+        icon={'Back'}
+      />
       <input
         className="flex border-none border-b-2 border-gray-300 p-5 mr-3 ml-3 text-base text-gray-700 focus:outline-none focus:border-green-500 w-40"
         id="search"
         type="search"
         placeholder="Your country"
         onKeyDown={handleKeyDown}
-        onChange={(event) => handleSearch(event)}
+        onChange={event => handleSearch(event)}
         // value={search}
         ref={searchRef}
         autoComplete="off"
@@ -66,11 +69,14 @@ const Search = () => {
       >
         Search
       </button> */}
-      <Button type={'submit'} onClick={(event) => handleSubmit(event)} styles={'[16rem] px-4 py-[1.2rem] border-none cursor-pointer'} color={'primary'} background={'transparent'} icon={"Search"} />
+      <Button
+        type={'submit'}
+        onClick={event => handleSubmit(event)}
+        styles={'[16rem] px-4 py-[1.2rem] border-none cursor-pointer'}
+        color={'primary'}
+        background={'transparent'}
+        icon={'Search'}
+      />
     </div>
-  );
-  
-  
+  )
 }
-
-export default Search

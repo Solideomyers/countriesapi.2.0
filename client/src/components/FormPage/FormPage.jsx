@@ -2,11 +2,11 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { getCountries } from '../../redux/sliceCountries'
+import { getCountries } from '../../redux/slices/sliceCountries'
 import Validation from './Validation'
 import Styles from './FormPage.module.css'
 
-const FormPage = () => {
+export const FormPage = () => {
   //bring state global
   const countries = useSelector(state => state.countries.sorting)
   // console.log(countries)
@@ -61,8 +61,10 @@ const FormPage = () => {
       ),
     })
   }
-console.log(countries)
-  const countriesSort = [...countries].sort((a, b) => a.name.localeCompare(b.name))
+  console.log(countries)
+  const countriesSort = [...countries].sort((a, b) =>
+    a.name.localeCompare(b.name),
+  )
 
   return (
     <div className={Styles.boxForm}>
@@ -195,4 +197,3 @@ console.log(countries)
     </div>
   )
 }
-export default FormPage

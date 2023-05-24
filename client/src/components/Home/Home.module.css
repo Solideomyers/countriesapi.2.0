@@ -1,6 +1,6 @@
 .containerHome {
   margin: 20px;
-  height:100vh;
+  height: 100vh;
   /*background: #d1cdc7;*/
   background: url('../../assets/landing1.png');
   background-repeat: no-repeat;
@@ -28,7 +28,6 @@
 }
 
 .cardHome {
-
   box-shadow: 6px 6px 4px #000, -6px -6px 4px #d7d4cc;
   border-radius: 10px;
   overflow: hidden;

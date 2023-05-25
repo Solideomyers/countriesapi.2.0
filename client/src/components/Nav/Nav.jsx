@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { BsHouseDoor, BsPersonCircle } from "react-icons/bs"
 import { SiXdadevelopers } from 'react-icons/si'
 import { HiMenuAlt3 } from 'react-icons/hi'
-import { MdClose } from 'react-icons/md'
+import { MdClose, MdOutlineCreate } from 'react-icons/md'
 import { Button } from '../Button/Button'
 import { Search } from '../Search/Search'
 export const Nav = () => {
@@ -29,20 +30,20 @@ export const Nav = () => {
         {!ubication ? <Search /> : ''}
         <Link
           to="/home"
-          className="font-nunito-light text-xl font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-500 delay-75 rounded-xl hover:bg-primary hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]"
-        >
+          className="flex gap-1 items-center font-nunito-light text-xl font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-800 rounded-xl hover:border-2 hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]"
+        ><BsHouseDoor />
           Home
         </Link>
         <Link
           to="/form"
-          className="font-nunito-light text-xl font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-500 delay-75 rounded-xl hover:bg-primary hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]"
-        >
+          className="flex gap-1 items-center font-nunito-light text-xl font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-800 rounded-xl hover:border-2 hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]"
+        ><MdOutlineCreate />
           Create Activity
         </Link>
         <Link
           to="/about"
-          className="font-nunito-light text-xl font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-500 delay-75 rounded-xl hover:bg-primary hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]"
-        >
+          className="flex gap-1 items-center font-nunito-light text-xl font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-800 rounded-xl hover:border-2 hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]"
+        ><BsPersonCircle />
           About
         </Link>
       </nav>

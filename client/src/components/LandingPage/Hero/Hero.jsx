@@ -30,12 +30,12 @@ export const Hero = () => {
               linked={'/home'}
               disabled={null}
               onClick={null}
-              flex={'flex items-center gap-4 border-none hover:bg-opacity-90'}
-              styles={'full'}
-              background={'transparent'}
+              flex={'flex items-center gap-4'}
+              styles={'full hover:border-2 hover:border-white hover:bg-transparent'}
+              background={null}
               size={'xl'}
               icon={
-                <BsHouseDoor className="bg-secondary rounded-full text-primary p-4 box-content " />
+                <BsHouseDoor className=" bg-transparent text-xl rounded-full text-white p-1 box-content " />
               }
               text={"Let's start"}
               color={'primary'}

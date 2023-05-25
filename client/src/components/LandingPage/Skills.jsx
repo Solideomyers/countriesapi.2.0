@@ -15,7 +15,7 @@ export const Skills = ({ position }) => {
     >
       <ul className="text-black w-full xl:flex flex-wrap gap-2 justify-center items-center">
         <li className="flex items-center py-2 gap-1 mx-1">
-          <FaReact className="text-3xl mr-2 text-sky-400 hover:bg-white drop-shadow-[2px_2px_1px_black]" />
+          <FaReact className="text-3xl mr-2 text-sky-400 drop-shadow-[2px_2px_1px_black]" />
           <span className="text-xl">React</span>
         </li>
         <li className="flex items-center py-2 ">

@@ -1,9 +1,9 @@
-import React, { forwardRef } from 'react';
-import { useCombobox } from 'downshift';
+import React, { forwardRef } from 'react'
+import { useCombobox } from 'downshift'
 
-export const Continents = forwardRef(({ onChange }, ref) => {
+export const Continents = forwardRef(({ value, onChange }, ref) => {
   const continents = [
-    { value: 'all', label: 'All' },
+    { value: 'All', label: 'All' },
     { value: 'Africa', label: 'Africa' },
     { value: 'Asia', label: 'Asia' },
     { value: 'Antarctica', label: 'Antarctica' },
@@ -11,7 +11,7 @@ export const Continents = forwardRef(({ onChange }, ref) => {
     { value: 'North America', label: 'North America' },
     { value: 'South America', label: 'South America' },
     { value: 'Oceania', label: 'Oceania' },
-  ];
+  ]
 
   const {
     isOpen,
@@ -25,18 +25,22 @@ export const Continents = forwardRef(({ onChange }, ref) => {
   } = useCombobox({
     items: continents,
     onSelectedItemChange: ({ selectedItem }) => {
-      onChange(selectedItem.value);
+      onChange(selectedItem.value)
     },
-  });
+  })
 
   return (
     <>
       <div className="flex flex-col flex-basis-[calc(33.33%-20px)] mb-20">
-        <label className="font-bold mb-5 text-white text-xl" {...getLabelProps()}>Sort by Continents</label>
+        <label
+          className="font-bold mb-2 text-white text-xl"
+          {...getLabelProps()}
+        >
+          Continents
+        </label>
         <div>
           <input
-            {...getInputProps()}
-            ref={ref}
+            {...getInputProps({ ref })}
             placeholder="Select Continent"
             className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -48,15 +52,20 @@ export const Continents = forwardRef(({ onChange }, ref) => {
             &#9660;
           </button>
         </div>
-        <ul {...getMenuProps()} className={`mt-1 bg-white rounded-md shadow-lg ${isOpen ? 'block' : 'hidden'}`}>
+        <ul
+          {...getMenuProps()}
+          className={`mt-1 bg-white rounded-md shadow-lg ${
+            isOpen ? 'block' : 'hidden'
+          }`}
+        >
           {isOpen &&
             continents.map((item, index) => (
               <li
                 key={`${item.value}-${index}`}
                 {...getItemProps({ item, index })}
-                className={`py-2 px-4 ${highlightedIndex === index ? 'bg-gray-100' : ''} ${
-                  selectedItem === item ? 'text-blue-500' : ''
-                }`}
+                className={`py-2 px-4 ${
+                  highlightedIndex === index ? 'bg-gray-100' : ''
+                } ${selectedItem === item ? 'text-blue-500' : ''}`}
               >
                 {item.label}
               </li>
@@ -64,5 +73,5 @@ export const Continents = forwardRef(({ onChange }, ref) => {
         </ul>
       </div>
     </>
-  );
-});
+  )
+})

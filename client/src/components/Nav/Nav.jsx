@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { BsHouseDoor, BsPersonCircle } from "react-icons/bs"
+import { BsHouseDoor, BsPersonCircle } from 'react-icons/bs'
 import { SiXdadevelopers } from 'react-icons/si'
 import { HiMenuAlt3 } from 'react-icons/hi'
 import { MdClose, MdOutlineCreate } from 'react-icons/md'
@@ -31,19 +31,22 @@ export const Nav = () => {
         <Link
           to="/home"
           className="flex gap-1 items-center font-nunito-light text-xl font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-800 rounded-xl hover:border-2 hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]"
-        ><BsHouseDoor />
+        >
+          <BsHouseDoor />
           Home
         </Link>
         <Link
           to="/form"
           className="flex gap-1 items-center font-nunito-light text-xl font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-800 rounded-xl hover:border-2 hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]"
-        ><MdOutlineCreate />
+        >
+          <MdOutlineCreate />
           Create Activity
         </Link>
         <Link
           to="/about"
           className="flex gap-1 items-center font-nunito-light text-xl font-bold px-4 py-[1.2rem] transition-all ease-in-out duration-800 rounded-xl hover:border-2 hover:bg-opacity-90 hover:text-white hover:drop-shadow-[4px_4px_5px_black]"
-        ><BsPersonCircle />
+        >
+          <BsPersonCircle />
           About
         </Link>
       </nav>

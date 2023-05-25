@@ -1,22 +1,69 @@
-import React, { forwardRef } from 'react';
-import Dropdown from 'react-dropdown-select';
+import React, { forwardRef } from 'react'
+import { useCombobox } from 'downshift'
 
-export const Populations = forwardRef(({ onChange }, ref) => {
+export const Populations = forwardRef(({ value, onChange }, ref) => {
+  const {
+    isOpen,
+    getToggleButtonProps,
+    getLabelProps,
+    getMenuProps,
+    getItemProps,
+    getInputProps,
+    highlightedIndex,
+    selectedItem,
+  } = useCombobox({
+    items: [
+      { value: 'population', label: 'Population' },
+      { value: 'low', label: 'Low' },
+      { value: 'high', label: 'High' },
+    ],
+    onSelectedItemChange: ({ selectedItem }) => {
+      onChange(selectedItem.value)
+    },
+  })
+
   return (
     <>
-      <div className="flex flex-col flex-basis-[calc(33.33%-20px)] mb-20">
-        <label className="font-bold mb-5 text-white text-xl">Sort by Population</label>
-        <Dropdown
-          options={[
-            { value: 'population', label: 'Population' },
-            { value: 'low', label: 'Low' },
-            { value: 'high', label: 'High' },
-          ]}
-          name="Population"
-          ref={ref}
-          onChange={(value) => onChange(value[0].value)}
-        />
+      <div className="flex flex-col flex-basis-[calc(33.33%-20px)] mb-2">
+        <label className="font-bold mb-2 text-white text-xl">Population</label>
+        <div>
+          <input
+            {...getInputProps({ ref })}
+            placeholder="Select Population Order"
+            value={value}
+            className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            type="button"
+            {...getToggleButtonProps()}
+            className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md border border-gray-300 ml-1 focus:outline-none"
+          >
+            &#9660;
+          </button>
+          <ul
+            {...getMenuProps()}
+            className={`mt-1 bg-white rounded-md shadow-lg ${
+              isOpen ? 'block' : 'hidden'
+            }`}
+          >
+            {isOpen &&
+              [
+                { value: 'low', label: 'Low' },
+                { value: 'high', label: 'High' },
+              ].map((item, index) => (
+                <li
+                  key={`${item.value}-${index}`}
+                  {...getItemProps({ item, index })}
+                  className={`py-2 px-4 ${
+                    highlightedIndex === index ? 'bg-gray-100' : ''
+                  } ${selectedItem === item ? 'text-blue-500' : ''}`}
+                >
+                  {item.label}
+                </li>
+              ))}
+          </ul>
+        </div>
       </div>
     </>
-  );
-});
+  )
+})

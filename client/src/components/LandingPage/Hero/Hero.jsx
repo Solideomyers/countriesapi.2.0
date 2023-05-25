@@ -31,7 +31,9 @@ export const Hero = () => {
               disabled={null}
               onClick={null}
               flex={'flex items-center gap-4'}
-              styles={'full hover:border-2 hover:border-white hover:bg-transparent'}
+              styles={
+                'full hover:border-2 hover:border-white hover:bg-transparent'
+              }
               background={null}
               size={'xl'}
               icon={

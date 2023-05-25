@@ -31,10 +31,10 @@ const Home = () => {
   }, [])
 
   return (
-    <div className="relative py-6 px-2 bg-gradient-to-br from-[#1a2536] to-[#fe7b02] min-h-screen">
+    <div className="absolute w-full py-6 px-2 bg-gradient-to-br from-[#1a2536] to-[#fe7b02] min-h-screen">
       <Nav />
       <Filters setInput={setInput} setCurrent={setCurrent} />
-      <div className="-z-50 container mx-auto px-4 py-10">
+      <div className="container mx-auto px-4 py-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {sorting
             ?.slice((current - 1) * perPage, (current - 1) * perPage + perPage)

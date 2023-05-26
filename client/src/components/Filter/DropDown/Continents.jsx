@@ -3,7 +3,6 @@ import { useCombobox } from 'downshift'
 
 export const Continents = forwardRef(({ value, onChange }, ref) => {
   const continents = [
-    { value: 'All', label: 'All' },
     { value: 'Africa', label: 'Africa' },
     { value: 'Asia', label: 'Asia' },
     { value: 'Antarctica', label: 'Antarctica' },
@@ -31,7 +30,7 @@ export const Continents = forwardRef(({ value, onChange }, ref) => {
 
   return (
     <>
-      <div className="flex flex-col flex-basis-[calc(33.33%-20px)] mb-20">
+      <div className="flex flex-col flex-basis-[calc(33.33%-20px)] mb-2">
         <label
           className="font-bold mb-2 text-white text-xl"
           {...getLabelProps()}
@@ -41,6 +40,7 @@ export const Continents = forwardRef(({ value, onChange }, ref) => {
         <div>
           <input
             {...getInputProps({ ref })}
+            value={value}
             placeholder="Select Continent"
             className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />

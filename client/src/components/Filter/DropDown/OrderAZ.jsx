@@ -13,7 +13,6 @@ export const OrderAZ = forwardRef(({ value, onChange }, ref) => {
     selectedItem,
   } = useCombobox({
     items: [
-      { value: 'sort', label: 'Sort' },
       { value: 'asc', label: 'A-Z' },
       { value: 'desc', label: 'Z-A' },
     ],
@@ -24,8 +23,8 @@ export const OrderAZ = forwardRef(({ value, onChange }, ref) => {
 
   return (
     <>
-      <div className="flex flex-col flex-basis-[calc(33.33%-20px)] mb-20">
-        <label className="font-bold mb-2 text-white text-xl">Name</label>
+      <div className="flex flex-col flex-basis-[calc(33.33%-20px)] mb-2">
+        <label className="font-bold mb-2 text-white text-xl"  {...getLabelProps()}>Name</label>
         <div>
           <input
             {...getInputProps({ ref })}

@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
-import Styles from './Pagination.module.css'
+import {
+  MdKeyboardDoubleArrowRight,
+  MdKeyboardDoubleArrowLeft,
+} from 'react-icons/md'
 import { Button } from '../Button/Button'
+import { Input } from './Input'
 
 export const Pagination = ({ current, setCurrent, max }) => {
   const [input, setInput] = useState(current.toString())
@@ -12,7 +16,9 @@ export const Pagination = ({ current, setCurrent, max }) => {
       setInput(newPage.toString())
     }
   }
-
+  const handleChangeInput = event => {
+    setInput(event.target.value)
+  }
   const handleKeyDown = event => {
     if (event.key === 'Enter') {
       goToPage(event.target.value)
@@ -30,48 +36,33 @@ export const Pagination = ({ current, setCurrent, max }) => {
   }
 
   return (
-    <div className={Styles.containerPagination}>
-      {/* <button
-        disabled={current === 1}
-        className={Styles.btnPagination}
+    <div className='flex items-center justify-center mx-4 my-5'>
+      <Button
+        background={'transparent'}
+        styles={
+          ' hover:border-transparent text-primary drop-shadow-[1px_5px_2px_black] text-2xl border-[2px]'
+        }
         onClick={previous}
-      >
-        {"<"}
-      </button> */}
-      <Button
-        background={'prussian-blue'}
-        onClick={next}
-        color={'prussian - blue'}
+        color={null}
         disabled={current === max}
-        icon={'<'}
+        icon={<MdKeyboardDoubleArrowLeft />}
       />
-      <div className={Styles.inputWrapper}>
-        <label>Page</label>
-        <input
-          className={Styles.inputPagination}
-          type="text"
-          maxLength="2"
-          name="page"
-          autoComplete="off"
-          onChange={event => setInput(event.target.value)}
-          onKeyDown={handleKeyDown}
-          value={input}
-        />
-        <span>of {max}</span>
-      </div>
-      {/* <button
-        disabled={current === max}
-        className={Styles.btnPagination}
-        onClick={next}
-      >
-        {">"}
-      </button> */}
+
+      <Input
+        input={input}
+        handleChangeInput={handleChangeInput}
+        handleKeyDown={handleKeyDown}
+        max={max}
+      />
       <Button
-        background={'prussian-blue'}
+        background={'transparent'}
+        styles={
+          ' hover:border-transparent text-primary drop-shadow-[1px_5px_2px_black] text-2xl border-[2px]'
+        }
         onClick={next}
         color={null}
         disabled={current === max}
-        icon={'>'}
+        icon={<MdKeyboardDoubleArrowRight />}
       />
     </div>
   )

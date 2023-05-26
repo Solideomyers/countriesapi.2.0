@@ -24,7 +24,12 @@ export const Populations = forwardRef(({ value, onChange }, ref) => {
   return (
     <>
       <div className="flex flex-col flex-basis-[calc(33.33%-20px)] mb-2">
-        <label className="font-bold mb-2 text-white text-xl" {...getLabelProps()}>Population</label>
+        <label
+          className="font-bold mb-2 text-white text-xl"
+          {...getLabelProps()}
+        >
+          Population
+        </label>
         <div>
           <input
             {...getInputProps({ ref })}

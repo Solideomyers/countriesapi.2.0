@@ -1,11 +1,13 @@
-import React from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 export const Footer = () => {
   return (
     <footer className="footer rounded-2xl bg-white bg-opacity-20 flex flex-col justify-center items-center py-4 text-center">
-      <p className="w-full text-xl text-white drop-shadow-[1px_1px_1px_black] tracking-wide font-semibold font-nunito">Powered by SoliDev</p>
+      <p className="w-full text-xl text-white drop-shadow-[1px_1px_1px_black] tracking-wide font-semibold font-nunito">
+        Powered by SoliDev
+      </p>
       <div className="icons flex justify-center items-center mt-4">
         <a
           href="https://github.com/Solideomyers"
@@ -25,5 +27,5 @@ export const Footer = () => {
         </a>
       </div>
     </footer>
-  );
-};
+  )
+}

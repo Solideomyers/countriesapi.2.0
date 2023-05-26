@@ -6,10 +6,13 @@ import { Nav } from '../Nav/Nav'
 import { Filters } from '../Filter/Filter'
 import { Pagination } from '../Pagination/Pagination'
 import { Footer } from '../Footer/Footer'
+import { useGoUp } from '../hooks/useGoUp'
 
 const Home = () => {
-  // Hook
+  // Hooks
   const dispatch = useDispatch()
+
+  const goUp = useGoUp()
 
   // Global state
   const sorting = useSelector(state => state.countries.sorting)
@@ -48,6 +51,7 @@ const Home = () => {
             ))}
         </div>
       </div>
+      {goUp}
       <Pagination
         current={current}
         setCurrent={setCurrent}

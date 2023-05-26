@@ -32,6 +32,7 @@ export default {
       },
       animation: {
         'bounce-left': 'bounce-left 1s ease-in-out infinite',
+        'spin-slow': 'spin 10s linear infinite',
       },
       keyframes: {
         'bounce-left': {

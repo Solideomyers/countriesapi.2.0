@@ -54,8 +54,8 @@ export const Activities = forwardRef(({ value, activities, onChange }, ref) => {
                     item: { value: item.name, label: item.name },
                     index,
                   })}
-                  className={`py-2 px-4 ${
-                    highlightedIndex === index ? 'bg-gray-100' : ''
+                  className={`py-2 px-4 rounded-lg font-semibold text-primary ${
+                    highlightedIndex === index ? 'bg-gray-200' : ''
                   } ${selectedItem === item.name ? 'text-blue-500' : ''}`}
                 >
                   {item.name}

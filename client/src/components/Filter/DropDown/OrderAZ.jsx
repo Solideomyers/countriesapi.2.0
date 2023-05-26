@@ -53,8 +53,8 @@ export const OrderAZ = forwardRef(({ value, onChange }, ref) => {
                 <li
                   key={`${item.value}-${index}`}
                   {...getItemProps({ item, index })}
-                  className={`py-2 px-4 ${
-                    highlightedIndex === index ? 'bg-gray-100' : ''
+                  className={`py-2 px-4 rounded-lg font-semibold text-primary ${
+                    highlightedIndex === index ? 'bg-gray-200' : ''
                   } ${selectedItem === item ? 'text-blue-500' : ''}`}
                 >
                   {item.label}

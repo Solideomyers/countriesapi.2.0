@@ -85,7 +85,7 @@ export const Filters = () => {
   // We return the JSX structure of the Filters component.
   return (
     <div className="relative z-50 flex justify-center w-full h-[8rem] mt-2">
-      <div className="flex justify-center items-center gap-4 p-4 rounded-lg backdrop-filter backdrop-blur-md hover:shadow-lg transition-all duration-300 w-full">
+      <div className="flex justify-center gap-4 p-4 rounded-lg backdrop-filter backdrop-blur-md hover:shadow-lg transition-all duration-300 w-full">
         {/* We render the Continents component, passing the reference and change function as props. */}
         <Continents
           value={countriesRef.current?.value}
@@ -115,7 +115,7 @@ export const Filters = () => {
           onChange={value => handleFilterChange('Population', value)}
         />
 
-        <div className="flex items-center mt-6 h-fit">
+        <div className="flex items-center mt-5">
           {/* We render a button that triggers the `handleClean` function when clicked. */}
           {/* <button
             className="p-2 rounded-lg border-none bg-blue-500 text-white shadow-md transition-all duration-300 hover:bg-white hover:text-blue-500 hover:shadow-md hover:-inset-5"

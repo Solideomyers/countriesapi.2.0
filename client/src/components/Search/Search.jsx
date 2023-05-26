@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useRef } from 'react'
 import { useDispatch } from 'react-redux'
-import { RiArrowGoBackFill } from "react-icons/ri"
+import { RiArrowGoBackFill } from 'react-icons/ri'
 import { getByName, getCountries } from '../../redux/slices/sliceCountries'
 import { Button } from '../Button/Button'
 
@@ -39,7 +39,9 @@ export const Search = () => {
     <div className="flex justify-between items-center m-4">
       <Button
         onClick={event => handleClose(event)}
-        styles={'[16rem] text-2xl font-extrabold px-4 py-[1.2rem] border-none cursor-pointer'}
+        styles={
+          '[16rem] text-2xl font-extrabold px-4 py-[1.2rem] border-none cursor-pointer'
+        }
         color={'primary'}
         background={'transparent'}
         icon={<RiArrowGoBackFill />}

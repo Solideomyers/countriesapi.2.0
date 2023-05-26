@@ -38,7 +38,7 @@ const Home = () => {
       <Nav />
       <Filters setInput={setInput} setCurrent={setCurrent} />
       <div className="container mx-auto px-4 py-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {sorting
             ?.slice((current - 1) * perPage, (current - 1) * perPage + perPage)
             .map(({ id, name, flag, continent }) => (

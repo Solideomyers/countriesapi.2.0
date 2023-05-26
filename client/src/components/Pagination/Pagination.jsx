@@ -36,7 +36,7 @@ export const Pagination = ({ current, setCurrent, max }) => {
   }
 
   return (
-    <div className='flex items-center justify-center mx-4 my-5'>
+    <div className="flex items-center justify-center mx-4 my-5">
       <Button
         background={'transparent'}
         styles={

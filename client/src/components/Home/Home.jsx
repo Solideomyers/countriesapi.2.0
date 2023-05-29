@@ -38,8 +38,9 @@ const Home = () => {
     <div className="absolute w-full py-6 px-2 bg-gradient-to-br from-[#1a2536] to-[#fe7b02] min-h-screen">
       <Nav />
       <Filters setInput={setInput} setCurrent={setCurrent} />
-      <div className="container mx-auto px-4 py-10">
-        <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      <div className="container mx-auto px-4 py-10 flex justify-center">
+        <div className="flex flex-wrap justify-center" 
+        >
           {!sorting.length > 0 ? (
             <div className="w-[80vw] h-full flex justify-center">
               <Loading />
@@ -52,7 +53,7 @@ const Home = () => {
               )
               .map(({ id, name, flag, continent }) => (
                 <div
-                  className="shadow-md rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+                  className='inline-block mx-2 my-6 '
                   key={id}
                 >
                   <Card id={id} name={name} flag={flag} continent={continent} />

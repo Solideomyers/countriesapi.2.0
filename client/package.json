@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@uiball/loaders": "^1.2.6",
     "autoprefixer": "^10.4.14",
     "axios": "^1.4.0",
     "downshift": "^7.6.0",

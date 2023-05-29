@@ -38,10 +38,13 @@ const Home = () => {
     <div className="absolute w-full py-6 px-2 bg-gradient-to-br from-[#1a2536] to-[#fe7b02] min-h-screen">
       <Nav />
       <Filters setInput={setInput} setCurrent={setCurrent} />
-      {/* <Loading /> */}
       <div className="container mx-auto px-4 py-10">
         <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          {sorting.length > 0 ? (
+          {!sorting.length > 0 ? (
+            <div className="w-[80vw] h-full flex justify-center">
+              <Loading />
+            </div>
+          ) : (
             sorting
               ?.slice(
                 (current - 1) * perPage,
@@ -55,8 +58,6 @@ const Home = () => {
                   <Card id={id} name={name} flag={flag} continent={continent} />
                 </div>
               ))
-          ) : (
-            <Loading />
           )}
         </div>
       </div>

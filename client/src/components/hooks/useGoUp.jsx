@@ -15,7 +15,7 @@ export const useGoUp = () => {
   const [showScrollButton, setShowScrollButton] = useState(false)
 
   const handleScroll = () => {
-    const shouldShowScrollButton = window.scrollY > window.innerHeight * 0.7
+    const shouldShowScrollButton = window.scrollY > window.innerHeight * 0.1
     setShowScrollButton(shouldShowScrollButton)
   }
 

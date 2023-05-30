@@ -12,11 +12,14 @@
     "format": "npm run prettier -- --write"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@reduxjs/toolkit": "^1.9.5",
     "@uiball/loaders": "^1.2.6",
     "autoprefixer": "^10.4.14",
     "axios": "^1.4.0",
     "downshift": "^7.6.0",
+    "emailjs": "4.0.2",
+    "emailjs-com": "^3.2.0",
     "formik": "^2.3.2",
     "framer-motion": "^10.12.16",
     "postcss": "^8.4.23",

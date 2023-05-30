@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@emailjs/browser':
+    specifier: ^3.11.0
+    version: 3.11.0
   '@reduxjs/toolkit':
     specifier: ^1.9.5
     version: 1.9.5(react-redux@8.0.5)(react@18.2.0)
@@ -16,6 +19,12 @@ dependencies:
   downshift:
     specifier: ^7.6.0
     version: 7.6.0(react@18.2.0)
+  emailjs:
+    specifier: 4.0.2
+    version: 4.0.2
+  emailjs-com:
+    specifier: ^3.2.0
+    version: 3.2.0
   formik:
     specifier: ^2.3.2
     version: 2.3.2(react@18.2.0)
@@ -350,6 +359,11 @@ packages:
 
   /@cush/relative@1.0.0:
     resolution: {integrity: sha512-RpfLEtTlyIxeNPGKcokS+p3BZII/Q3bYxryFRglh5H3A3T8q9fsLYm72VYAMEOOIBLEa8o93kFLiBDUWKrwXZA==}
+    dev: false
+
+  /@emailjs/browser@3.11.0:
+    resolution: {integrity: sha512-RkY3FKZ3fPdK++OeF46mRTFpmmQWCHUVHZH209P3NE4D5sg2Atg7S2wa3gw5062Gl4clt4Wn5SyC4WhlVZC5pA==}
+    engines: {node: '>=14.0.0'}
     dev: false
 
   /@emotion/is-prop-valid@0.8.8:
@@ -1319,6 +1333,22 @@ packages:
 
   /electron-to-chromium@1.4.394:
     resolution: {integrity: sha512-0IbC2cfr8w5LxTz+nmn2cJTGafsK9iauV2r5A5scfzyovqLrxuLoxOHE5OBobP3oVIggJT+0JfKnw9sm87c8Hw==}
+
+  /emailjs-com@3.2.0:
+    resolution: {integrity: sha512-Prbz3E1usiAwGjMNYRv6EsJ5c373cX7/AGnZQwOfrpNJrygQJ15+E9OOq4pU8yC977Z5xMetRfc3WmDX6RcjAA==}
+    engines: {node: '>=12.0.0'}
+    deprecated: The SDK name changed to @emailjs/browser
+    dev: false
+
+  /emailjs@4.0.2:
+    resolution: {integrity: sha512-w/tldI93qO7uw9XzdwCCRR36OY/TYJxB81vEOmQkmxVDZOdrAnoQoOAvaMoDmmBUSoD1msyAIwBdKFWzC7lgKQ==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      typescript: '>=4.3.5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dev: false
 
   /encodeurl@1.0.2:
     resolution: {integrity: sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==}

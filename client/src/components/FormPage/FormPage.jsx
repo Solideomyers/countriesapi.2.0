@@ -226,93 +226,138 @@ const handleSubmit = values => {
 
 export const FormPage = () => {
   return (
-    <div className='bg-gradient-to-br from-[#1a2536] to-[#fe7b02] w-full h-[100vh] backdrop-blur-lg backdrop-filter'>
-
-    <div className="transform -translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 text-white p-6 mx-auto rounded-xl shadow-2xl bg-black bg-opacity-30 shadow-black backdrop-blur-full backdrop-filter w-1/4">
-      <h2 className="text-2xl text-center font-bold mb-4">New Activity</h2>
-      <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
-        <Form>
-          <div className="mb-4 text-xl">
-            <label className="block mb-1 font-semibold tracking-wide">Name</label>
-            <Field
-              type="text"
-              name="name"
-              className="border border-gray-300 focus:outline-none text-white bg-transparent p-2 rounded-xl w-full"
-            />
-            <ErrorMessage
-              name="name"
-              component="div"
-              className="text-red-500"
-            />
-          </div>
-          <div className="mb-4 text-xl">
-            <label className="block mb-1 font-semibold tracking-wide">Difficulty:</label>
-            <Field
-              as="select"
-              name="difficulty"
-              className="border border-gray-300 focus:outline-none text-white  bg-transparent p-2 rounded-xl w-full"
-            >
-              <option className='bg-opacity-90 bg-black rounded-xl' value="">-- Select Difficulty --</option>
-              <option className='bg-opacity-90 bg-black rounded-xl' value="1">1</option>
-              <option className='bg-opacity-90 bg-black rounded-xl' value="2">2</option>
-              <option className='bg-opacity-90 bg-black rounded-xl' value="3">3</option>
-              <option className='bg-opacity-90 bg-black rounded-xl' value="4">4</option>
-              <option className='bg-opacity-90 bg-black rounded-xl' value="5">5</option>
-            </Field>
-            <ErrorMessage
-              name="difficulty"
-              component="div"
-              className="text-red-500"
-            />
-          </div>
-          <div className="mb-4 text-xl">
-            <label className="block mb-1 font-semibold tracking-wide">Duration:</label>
-            <Field
-              type="text"
-              name="duration"
-              className="border border-gray-300 focus:outline-none text-white bg-transparent p-2 rounded-xl w-full"
-            />
-            <ErrorMessage
-              name="duration"
-              component="div"
-              className="text-red-500"
-            />
-          </div>
-          <div className="mb-4 text-xl">
-            <label className="block mb-1 font-semibold tracking-wide">Season:</label>
-            <Field
-              as="select"
-              name="season"
-              className="border border-gray-300 focus:outline-none text-white  bg-transparent p-2 rounded-xl w-full"
-            >
-              <option className='bg-opacity-90 bg-black rounded-xl' value="">-- Select Season --</option>
-              <option className='bg-opacity-90 bg-black rounded-xl' value="Summer">Summer</option>
-              <option className='bg-opacity-90 bg-black rounded-xl' value="Autumn">Autumn</option>
-              <option className='bg-opacity-90 bg-black rounded-xl' value="Winter">Winter</option>
-              <option className='bg-opacity-90 bg-black rounded-xl' value="Spring">Spring</option>
-            </Field>
-            <ErrorMessage
-              name="season"
-              component="div"
-              className="text-red-500"
-            />
-          </div>
-          {/* <button
+    <div className="bg-gradient-to-br from-[#1a2536] to-[#fe7b02] w-full h-[100vh] backdrop-blur-lg backdrop-filter">
+      <div className="transform -translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 text-white p-6 mx-auto rounded-xl shadow-2xl bg-black bg-opacity-30 shadow-black backdrop-blur-full backdrop-filter w-1/4">
+        <h2 className="text-2xl text-center font-bold mb-4">New Activity</h2>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          <Form>
+            <div className="mb-4 text-xl">
+              <label className="block mb-1 font-semibold tracking-wide">
+                Name
+              </label>
+              <Field
+                type="text"
+                name="name"
+                className="border border-gray-300 focus:outline-none text-white bg-transparent p-2 rounded-xl w-full"
+              />
+              <ErrorMessage
+                name="name"
+                component="div"
+                className="text-red-500"
+              />
+            </div>
+            <div className="mb-4 text-xl">
+              <label className="block mb-1 font-semibold tracking-wide">
+                Difficulty:
+              </label>
+              <Field
+                as="select"
+                name="difficulty"
+                className="border border-gray-300 focus:outline-none text-white  bg-transparent p-2 rounded-xl w-full"
+              >
+                <option className="bg-opacity-90 bg-black rounded-xl" value="">
+                  -- Select Difficulty --
+                </option>
+                <option className="bg-opacity-90 bg-black rounded-xl" value="1">
+                  1
+                </option>
+                <option className="bg-opacity-90 bg-black rounded-xl" value="2">
+                  2
+                </option>
+                <option className="bg-opacity-90 bg-black rounded-xl" value="3">
+                  3
+                </option>
+                <option className="bg-opacity-90 bg-black rounded-xl" value="4">
+                  4
+                </option>
+                <option className="bg-opacity-90 bg-black rounded-xl" value="5">
+                  5
+                </option>
+              </Field>
+              <ErrorMessage
+                name="difficulty"
+                component="div"
+                className="text-red-500"
+              />
+            </div>
+            <div className="mb-4 text-xl">
+              <label className="block mb-1 font-semibold tracking-wide">
+                Duration:
+              </label>
+              <Field
+                type="text"
+                name="duration"
+                className="border border-gray-300 focus:outline-none text-white bg-transparent p-2 rounded-xl w-full"
+              />
+              <ErrorMessage
+                name="duration"
+                component="div"
+                className="text-red-500"
+              />
+            </div>
+            <div className="mb-4 text-xl">
+              <label className="block mb-1 font-semibold tracking-wide">
+                Season:
+              </label>
+              <Field
+                as="select"
+                name="season"
+                className="border border-gray-300 focus:outline-none text-white  bg-transparent p-2 rounded-xl w-full"
+              >
+                <option className="bg-opacity-90 bg-black rounded-xl" value="">
+                  -- Select Season --
+                </option>
+                <option
+                  className="bg-opacity-90 bg-black rounded-xl"
+                  value="Summer"
+                >
+                  Summer
+                </option>
+                <option
+                  className="bg-opacity-90 bg-black rounded-xl"
+                  value="Autumn"
+                >
+                  Autumn
+                </option>
+                <option
+                  className="bg-opacity-90 bg-black rounded-xl"
+                  value="Winter"
+                >
+                  Winter
+                </option>
+                <option
+                  className="bg-opacity-90 bg-black rounded-xl"
+                  value="Spring"
+                >
+                  Spring
+                </option>
+              </Field>
+              <ErrorMessage
+                name="season"
+                component="div"
+                className="text-red-500"
+              />
+            </div>
+            {/* <button
             type="submit"
             className="bg-blue-500 text-white px-4 py-2 rounded"
           >
             Submit
           </button> */}
-          <Button icon={'Create'} styles={'full my-1'} />
-          <Button icon={'Home'} styles={'full my-1 bg-primary'} linked={'/home'} color='white' />
-
-        </Form>
-      </Formik>
-    </div>
+            <Button icon={'Create'} styles={'full my-1'} />
+            <Button
+              icon={'Home'}
+              styles={'full my-1 bg-primary'}
+              linked={'/home'}
+              color="white"
+            />
+          </Form>
+        </Formik>
+      </div>
     </div>
   )
 }
@@ -498,4 +543,3 @@ export const FormPage = () => {
 //     </div>
 //   );
 // };
-

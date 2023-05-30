@@ -39,8 +39,7 @@ const Home = () => {
       <Nav />
       <Filters setInput={setInput} setCurrent={setCurrent} />
       <div className="container mx-auto px-4 py-10 flex justify-center">
-        <div className="flex flex-wrap justify-center" 
-        >
+        <div className="flex flex-wrap justify-center">
           {!sorting.length > 0 ? (
             <div className="w-[80vw] h-full flex justify-center">
               <Loading />
@@ -52,10 +51,7 @@ const Home = () => {
                 (current - 1) * perPage + perPage,
               )
               .map(({ id, name, flag, continent }) => (
-                <div
-                  className='inline-block mx-2 my-6 '
-                  key={id}
-                >
+                <div className="inline-block mx-2 my-6 " key={id}>
                   <Card id={id} name={name} flag={flag} continent={continent} />
                 </div>
               ))

@@ -71,44 +71,52 @@
 //   )
 // }
 
-import React from 'react';
-import axios from 'axios';
-import { Link, useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import React from 'react'
+import axios from 'axios'
+import { Link, useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Button } from '../Button/Button'
+import { MdOutlineClose } from 'react-icons/md'
 
 export const Detail = () => {
-  const [country, setCountry] = useState([]);
-  let { id } = useParams();
+  const [country, setCountry] = useState([])
+  let { id } = useParams()
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios(`/countries/${id}`);
-        setCountry(data);
+        const { data } = await axios(`/countries/${id}`)
+        setCountry(data)
       } catch (error) {
-        console.log(error.message);
+        console.log(error.message)
       }
-    };
-    fetchData();
-  }, [id]);
+    }
+    fetchData()
+  }, [id])
 
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'decimal',
     useGrouping: true,
-  });
+  })
 
   return (
     <div className="flex justify-center items-center h-screen bg-gradient-to-br from-[#1a2536] to-[#fe7b02]">
-      <div className="max-w-md bg-white bg-opacity-10 backdrop-blur-lg backdrop-filter rounded-lg overflow-hidden shadow-md">
-        <Link to="/home">
-          <button className="absolute top-2 right-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full">
-            X
-          </button>
-        </Link>
-        <header className="bg-gray-200 bg-opacity-60 py-4 px-6">
-          <h2 className="text-xl font-bold">{country?.name}</h2>
+      <div className="max-w-md bg-white bg-opacity-10 backdrop-blur-lg backdrop-filter rounded-lg overflow-hidden shadow-sm shadow-white">
+        <Button
+          icon={<MdOutlineClose />}
+          linked={'/home'}
+          styles={
+            ' absolute top-2 right-2  hover:bg-transparent hover:drop-shadow-[4px_4px_5px_black] text-xl font-bold'
+          }
+          background={'transparent'}
+          color={'white'}
+        />
+        <header className="bg-primary bg-opacity-60 py-4 px-6">
+          <h2 className="text-xl text-white font-bold tracking-wide">
+            {country?.name}
+          </h2>
         </header>
-        <section className="px-6 py-4 text-white">
+        <section className="px-6 py-4 text-white  tracking-wide">
           <div className="flex justify-between mb-4">
             <h3 className="text-lg font-bold">ID:</h3>
             <p className="text-lg">{country?.id}</p>
@@ -131,9 +139,13 @@ export const Detail = () => {
           </div>
         </section>
         <section className="p-6 rounded-xl">
-          <img src={country.flag} alt={country.name} className="w-full" />
+          <img
+            src={country.flag}
+            alt={country.name}
+            className="w-full rounded-2xl"
+          />
         </section>
       </div>
     </div>
-  );
-};
+  )
+}

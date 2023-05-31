@@ -17,7 +17,7 @@ PI COUNTRIES 2.0
 
 * [![HTMLl5][html5]][html-url][![CSS3][css3]][css-url][![Javascript][javascript]][js-url]
 * [![Express][Express.js]][express-url][![Webpack][Webpack.js]][Webpack-url][![Node][Node.js]][Node-url][![NPM][npm]][npm-url]
-* [![React][React.js]][React-url][![Vite][Vite.js]]Vite-url][![Redux][Redux-query]][Redux-url][![Tailwind][Tailwind-css]][Tailwind-url]
+* [![React][React.js]][React-url][![Vite][Vite.js]][Vite-url][![Redux][Redux-query]][Redux-url][![Tailwind][Tailwind-css]][Tailwind-url]
 * [![Postgresql][pgsql]][pgsql-url][![Sequelize][Sequelize-orm]][Sequelize-url]
 * [![Git][git]][git-url][![Github][github]][github-url]
 

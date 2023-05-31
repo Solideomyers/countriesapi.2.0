@@ -24,7 +24,7 @@ export const Info = () => {
           <FaGithub className="iconAbout text-gray-700 text-xl transition-colors duration-300 hover:text-white" />
         </a>
         <a
-          href="https://www.linkedin.com/franciscomyers/"
+          href="https://www.linkedin.com/in/franciscomyers/"
           target="_blank"
           rel="noopener noreferrer"
           className="iconLinkAbout flex items-center justify-center mx-1 w-12 h-12 rounded-full bg-gray-200 transition-colors duration-300 hover:bg-gray-700"

@@ -19,8 +19,6 @@ PI COUNTRIES 2.0
 * [![Express][Express.js]][express-url][![Webpack][Webpack.js]][Webpack-url][![Node][Node.js]][Node-url][![NPM][npm]][npm-url]
 * [![React][React.js]][React-url][![Vite][Vite.js]]Vite-url][![Redux][Redux-query]][Redux-url][![Tailwind][Tailwind-css]][Tailwind-url]
 * [![Postgresql][pgsql]][pgsql-url][![Sequelize][Sequelize-orm]][Sequelize-url]
-<!-- * [![Railway][Railway]][Railway-url] -->
-<!-- * [![Figma][Figma-des]][Figma-url][![Trello][trello]][trello-url] -->
 * [![Git][git]][git-url][![Github][github]][github-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -46,12 +44,8 @@ Project Link: [https://github.com/solideomyers/countriesapi.2.0](https://github.
 [Vite-url]: https://vitejs.dev/
 [Express.js]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
 [Express-url]: https://expressjs.com
-<!-- [Figma-des]: https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white -->
-<!-- [Figma-url]: https://www.figma.com/ -->
 [Sequelize-orm]: https://img.shields.io/badge/Sequelize-3982CE?style=for-the-badge&logo=Prisma&logoColor=white
 [Sequelize-url]: https://sequelize.org/
-<!-- [Mongo-db]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white -->
-<!-- [Mongo-url]: https://www.mongodb.com/en/ -->
 [npm]: https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white
 [npm-url]: https://www.npmjs.com/
 [Node.js]: https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white
@@ -64,18 +58,12 @@ Project Link: [https://github.com/solideomyers/countriesapi.2.0](https://github.
 [Webpack-url]: https://webpack.js.org/
 [Render]: https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white
 [Render-url]: https://render.com/
-<!-- [Railway]: https://img.shields.io/badge/railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white -->
-<!-- [Railway-url]: https://railway.app/ -->
 [html5]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
 [html-url]: https://es.wikipedia.org/wiki/HTML5
 [css3]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
 [css-url]: https://developer.mozilla.org/es/docs/Web/CSS
 [javascript]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
 [js-url]: https://www.javascript.com/
-<!-- [typescript]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white -->
-<!-- [typescript-url]: https://www.typescriptlang.org/ -->
-<!-- [trello]: https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white -->
-<!-- [trello-url]: https://trello.com/ -->
 [git]: https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white
 [git-url]: https://git-scm.com/
 [github]: https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white

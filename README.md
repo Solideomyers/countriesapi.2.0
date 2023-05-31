@@ -4,13 +4,20 @@
 
 PI COUNTRIES 2.0
 
+### This is an enhanced version of the Individual Project from the SOYHENRY BOOTCAMP. The most significant changes that have been made are as follows:
+
+- Migration from Create React App to the implementation of React-Vite.
+- Migration from conventional Redux to Redux-Toolkit.
+- Handling data persistence in filters.
+- Modularization and reusability of many components.
+- Migration from module.css to Tailwind.css.
 
 
 ### Built With
 
 * [![HTMLl5][html5]][html-url][![CSS3][css3]][css-url][![Javascript][javascript]][js-url]
 * [![Express][Express.js]][express-url][![Webpack][Webpack.js]][Webpack-url][![Node][Node.js]][Node-url][![NPM][npm]][npm-url]
-* [![React][React.js]][React-url][![Redux][Redux-query]][Redux-url][![Tailwind][Tailwind-css]][Tailwind-url]
+* [![React][React.js]][React-url][![Vite][Vite.js]]Vite-url][![Redux][Redux-query]][Redux-url][![Tailwind][Tailwind-css]][Tailwind-url]
 * [![Postgresql][pgsql]][pgsql-url][![Sequelize][Sequelize-orm]][Sequelize-url]
 <!-- * [![Railway][Railway]][Railway-url] -->
 <!-- * [![Figma][Figma-des]][Figma-url][![Trello][trello]][trello-url] -->
@@ -23,7 +30,7 @@ PI COUNTRIES 2.0
 <!-- CONTRIBUTING -->
 ## Contributing
 
-* Francisco A. Myers - [![Linkedin]](https://www.linkedin.com/in/francisco-myers-148a7919a/) [![Github]](https://github.com/Solideomyers)
+* Francisco A. Myers - [![Linkedin]](https://www.linkedin.com/in/franciscomyers/) [![Github]](https://github.com/Solideomyers)
 
 
 Project Link: [https://github.com/solideomyers/countriesapi.2.0](https://github.com/solideomyers/countriesapi.2.0)
@@ -35,6 +42,8 @@ Project Link: [https://github.com/solideomyers/countriesapi.2.0](https://github.
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[Vite.js]: https://img.shields.io/badge/Vite-20232E?style=for-the-badge&logo=vite&logoColor=51DAF1
+[Vite-url]: https://vitejs.dev/
 [Express.js]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
 [Express-url]: https://expressjs.com
 <!-- [Figma-des]: https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white -->

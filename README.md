@@ -39,8 +39,8 @@ Project Link: [https://github.com/solideomyers/countriesapi.2.0](https://github.
 [Express-url]: https://expressjs.com
 <!-- [Figma-des]: https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white -->
 <!-- [Figma-url]: https://www.figma.com/ -->
-<!-- [Prisma-orm]: https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white -->
-<!-- [Prisma-url]: https://www.prisma.io/ -->
+[Prisma-orm]: https://img.shields.io/badge/Sequelize-3982CE?style=for-the-badge&logo=Prisma&logoColor=white
+[Prisma-url]: https://sequelize.org/
 <!-- [Mongo-db]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white -->
 <!-- [Mongo-url]: https://www.mongodb.com/en/ -->
 [npm]: https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white

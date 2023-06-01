@@ -10,15 +10,15 @@ export const SelectCountry = ({ handleSelect }) => {
 
   return (
     <div className="relative">
-      <label className="text-gray-700">Countries</label>
+      <label className="text-white font-semibold">Countries</label>
       <select
         name="country"
         onChange={handleSelect}
-        className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+        className="block w-full px-4 py-2 mt-2 font-bold text-white bg-white bg-opacity-10 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
       >
         <option value="countries">--Select Countries--</option>
         {countriesSort.map((event, i) => (
-          <option key={i} value={event.name}>
+          <option className='bg-white bg-opacity-10 font-bold text-black ' key={i} value={event.name}>
             {event.name}
           </option>
         ))}

@@ -15,7 +15,7 @@ export const Select = ({ label, name, value, options, onChange, error }) => {
 
   return (
     <div className="mb-4 relative">
-      <label className="block text-gray-700 text-sm font-bold mb-2">
+      <label className="block text-white text-sm font-bold mb-2">
         {label}
       </label>
       <div className="relative inline-block w-full">
@@ -28,13 +28,13 @@ export const Select = ({ label, name, value, options, onChange, error }) => {
           }
           onFocus={() => setIsOpen(true)}
           onBlur={() => setIsOpen(false)}
-          className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${hasError}`}
+          className={`shadow appearance-none border rounded w-full py-2 px-3 bg-white bg-opacity-10 text-white font-bold leading-tight focus:outline-none focus:shadow-outline ${hasError}`}
         />
         <div className="absolute right-0 top-0 h-full flex items-center">
           <button
             type="button"
             onClick={handleToggle}
-            className="focus:outline-none px-3 py-2 bg-gray-200 hover:bg-gray-300 rounded-r transition-colors duration-300 ease-in-out"
+            className="focus:outline-none px-3 py-2  hover:text-gray-300 rounded-r transition-colors duration-300 ease-in-out"
           >
             <svg
               className={`h-4 w-4 transform ${
@@ -48,7 +48,7 @@ export const Select = ({ label, name, value, options, onChange, error }) => {
           </button>
         </div>
         {isOpen && (
-          <ul className="absolute z-10 w-full bg-white border border-gray-300 py-1 mt-1 rounded-md shadow-lg">
+          <ul className="absolute z-10 w-full text-black bg-white border border-gray-300 py-1 mt-1 rounded-md shadow-lg">
             {options.map((option, index) => (
               <li
                 key={index}

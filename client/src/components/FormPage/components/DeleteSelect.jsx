@@ -1,4 +1,5 @@
-import { AiOutlineCloseCircle } from 'react-icons/ai'
+import { MdOutlineClose } from 'react-icons/md'
+
 export const DeleteSelect = ({ userData, handleDelete }) => {
   return (
     <div className="flex flex-wrap mt-2">
@@ -10,11 +11,11 @@ export const DeleteSelect = ({ userData, handleDelete }) => {
         >
           {country}
           <button
-            className="flex-shrink-0 ml-2 bg-red-500 hover:text-red-700"
+            className="flex-shrink-0 ml-2 items-center text-red-500 hover:text-red-700"
             onClick={handleDelete}
             value={country}
           >
-            <AiOutlineCloseCircle />
+            <MdOutlineClose className='font-bold text-lg text-center'/>
           </button>{' '}
         </span>
       ))}

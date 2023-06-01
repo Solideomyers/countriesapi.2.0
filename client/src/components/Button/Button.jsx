@@ -12,6 +12,7 @@ export const Button = ({
   flex,
   linked,
   type,
+  hidden
 }) => {
   return (
     <>
@@ -20,6 +21,7 @@ export const Button = ({
           onClick={onClick}
           disabled={disabled}
           type={type}
+          hidden={hidden}
           className={`rounded-xl border px-4 py-2 text-${color} bg-${background} font-ligth font-nunito text-${size} 
           font-bold uppercase tracking-widest border-${color} mx-auto transition duration-700 delay-100 
         ease-in-out hover:bg-prussian-blue hover:font-bold  hover:text-white md:mx-0 w-${styles} ${flex}`}

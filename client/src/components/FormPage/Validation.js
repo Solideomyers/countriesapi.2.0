@@ -1,6 +1,8 @@
 const Validation = create => {
   const errors = {}
-  if (create.name === '') errors.name = 'Introduce a valid name!'
+  if (!create.name) {
+    errors.name = 'Introduce a valid name!'
+  }
 
   if (create.name.match(/\d/g)) errors.name = 'The dont be a number!'
 

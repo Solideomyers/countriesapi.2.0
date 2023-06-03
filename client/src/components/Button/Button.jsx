@@ -12,7 +12,7 @@ export const Button = ({
   flex,
   linked,
   type,
-  hidden
+  hidden,
 }) => {
   return (
     <>

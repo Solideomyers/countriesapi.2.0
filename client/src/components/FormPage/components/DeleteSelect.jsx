@@ -15,7 +15,7 @@ export const DeleteSelect = ({ userData, handleDelete }) => {
             onClick={handleDelete}
             value={country}
           >
-            <MdOutlineClose className='font-bold text-lg text-center'/>
+            <MdOutlineClose className="font-bold text-lg text-center" />
           </button>{' '}
         </span>
       ))}

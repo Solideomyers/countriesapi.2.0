@@ -13,14 +13,16 @@ export const Input = ({
 }) => {
   const hasError = error ? 'border-red-500' : ''
   const errorMessage = error ? (
-    <span className="block text-red-500 text-md italic mt-1">{error}</span>
+    <span className="block text-red-500 text-lg font-bold tracking-wide drop-shadow-[1px_1px_1px_black] italic mt-1">
+      {error}
+    </span>
   ) : null
 
   return (
     <div className="mb-4">
       <label
         htmlFor={name}
-        className="block text-white text-sm font-bold mb-2"
+        className="block text-xl tracking-wide font-semibold drop-shadow-[1px_1px_1px_black] mb-2"
       >
         {label}:
       </label>

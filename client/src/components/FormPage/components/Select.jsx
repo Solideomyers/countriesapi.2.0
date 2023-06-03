@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export const Select = ({ label, name, value, options, onChange, error }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const hasError = error ? 'border-red-500' : ''
+  const hasError = error ? 'border-red-500 border-2' : ''
 
   const handleToggle = () => {
     setIsOpen(!isOpen)
@@ -15,14 +15,14 @@ export const Select = ({ label, name, value, options, onChange, error }) => {
 
   return (
     <div className="mb-4 relative">
-      <label className="block text-white text-sm font-bold mb-2">
+      <label className="block text-white text-xl tracking-wide font-semibold drop-shadow-[1px_1px_1px_black] mb-2">
         {label}
       </label>
       <div className="relative inline-block w-full">
         <input
           type="text"
           name={name}
-          value={value ? value.label : ''}
+          value={value}
           onChange={event =>
             onChange({ target: { name, value: event.target.value } })
           }
@@ -65,7 +65,11 @@ export const Select = ({ label, name, value, options, onChange, error }) => {
           </ul>
         )}
       </div>
-      {error && <span className="text-red-500 text-xs italic">{error}</span>}
+      {error && (
+        <span className="text-red-500 text-lg font-bold tracking-wide drop-shadow-[1px_1px_1px_black] italic">
+          {error}
+        </span>
+      )}
     </div>
   )
 }

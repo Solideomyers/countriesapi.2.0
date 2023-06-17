@@ -8,4 +8,5 @@ dotenv.config()
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), jsconfigPaths()],
+  base: "/countriesapi.2.0/"
 })

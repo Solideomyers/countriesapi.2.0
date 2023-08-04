@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { Activity, Country } = require("../db");
+const { Activity, Country } = require("../../db");
 const { Op } = require("sequelize");
 
 /////////////////////////INFO COUNTRIES////////////////////////////////////////

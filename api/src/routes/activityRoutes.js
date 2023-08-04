@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { Activity, Country } = require("../db");
+const { Activity, Country } = require("../../db");
 
 const router = Router();
 
